@@ -1,5 +1,6 @@
 from analyzer import check_password
 from generator import generate_password
+from hasher import hash_password
 
 while True:
     print("\n===== PASSWORD STRENGTH ANALYZER =====")
@@ -10,8 +11,11 @@ while True:
     choice = input("Enter your choice: ")
 
     if choice == "1":
-        password = input("Enter your password: ")
-        check_password(password)
+       password = input("Enter your password: ")
+       check_password(password)
+       hashed_password = hash_password(password)
+       print("\nSHA-256 Hash:")
+       print(hashed_password)
 
     elif choice == "2":
         new_password = generate_password()
