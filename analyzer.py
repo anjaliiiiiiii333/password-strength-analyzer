@@ -52,4 +52,4 @@ def check_password(password):
     if length < 12:
         print("-Use at least 12 characters.")
     else:
-        print("-No suggestions, your password is strong.")
+        print("✅ No suggestions. Your password is already very strong!")
